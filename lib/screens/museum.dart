@@ -7,8 +7,9 @@ class Museum extends StatefulWidget {
 }
 
 class _MuseumState extends State<Museum> {
-  final primary = Color(0xff607d8b);
-  final secondary = Color(0xffff9e80);
+  MuseumData info = new MuseumData();
+  final primary = Color(0xff3b6979);
+  final secondary = Color(0xff3b6979);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class _MuseumState extends State<Museum> {
                 height: MediaQuery.of(context).size.height,
                 width: double.infinity,
                 child: ListView.builder(
-                    itemCount: museum.length,
+                    itemCount: info.museum.length,
                     itemBuilder: (BuildContext context, int index) {
                       return buildList(context, index);
                     }),
@@ -61,7 +62,7 @@ class _MuseumState extends State<Museum> {
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.add_location),
+                        icon: Icon(Icons.place),
                         color: Colors.white,
                       ),
                     ],
@@ -76,40 +77,60 @@ class _MuseumState extends State<Museum> {
   }
 
   Widget buildList(BuildContext context, int index) {
+    void _showSecondPage(BuildContext context){
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => Scaffold(
+            body: Center(
+              child: Hero(
+                tag: '${info.museum[index]['tag']}',
+                child: Image.asset('${info.museum[index]['logotext']}'),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: Colors.white,
       ),
       width: double.infinity,
-      height: 190,
+      height: 195,
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            width: 60,
-            height: 60,
-            margin: EdgeInsets.only(right: 10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(width: 3, color: secondary),
-              image: DecorationImage(
-                  image: AssetImage('${museum[index]['logoText']}'),
-                  fit: BoxFit.fill),
+                borderRadius: BorderRadius.circular(50.0),
+                border: Border.all(width: 3 ,color: secondary)
             ),
+            child: GestureDetector(
+              child: Hero(
+                tag: '${info.museum[index]['tag']}',
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('${info.museum[index]['logotext']}'),
+                ),
+              ),
+              onTap: () => _showSecondPage(context),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 10.0),
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  museum[index]['name'],
+                  info.museum[index]['name'],
                   style: TextStyle(
                       color: primary,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                      fontSize: 22),
                 ),
                 SizedBox(
                   height: 6,
@@ -125,10 +146,10 @@ class _MuseumState extends State<Museum> {
                       width: 5,
                     ),
                     Text(
-                      museum[index]['location'],
+                      info.museum[index]['location'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -148,10 +169,10 @@ class _MuseumState extends State<Museum> {
                       width: 5,
                     ),
                     Text(
-                      museum[index]['Date'],
+                      info.museum[index]['date'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 12,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -171,10 +192,10 @@ class _MuseumState extends State<Museum> {
                       width: 5,
                     ),
                     Text(
-                      museum[index]['Cafe'],
+                      info.museum[index]['cafe'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 10,
+                        fontSize: 11,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -194,12 +215,13 @@ class _MuseumState extends State<Museum> {
                       width: 5,
                     ),
                     Text(
-                      museum[index]['price'],
+                      info.museum[index]['price'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 11,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
+                      textDirection: TextDirection.rtl,
                     ),
                   ],
                 ),

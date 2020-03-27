@@ -7,8 +7,9 @@ class Pyramids extends StatefulWidget {
 }
 
 class _PyramidsState extends State<Pyramids> {
-  final primary = Color(0xff607d8b);
-  final secondary = Color(0xffff9e80);
+  PyramidsData info = new PyramidsData();
+  final primary = Color(0xffba6b57);
+  final secondary = Color(0xffba6b57);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class _PyramidsState extends State<Pyramids> {
                 height: MediaQuery.of(context).size.height,
                 width: double.infinity,
                 child: ListView.builder(
-                    itemCount: pyramids.length,
+                    itemCount: info.pyramids.length,
                     itemBuilder: (BuildContext context, int index) {
                       return buildList(context, index);
                     }),
@@ -63,7 +64,7 @@ class _PyramidsState extends State<Pyramids> {
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.add_location),
+                        icon: Icon(Icons.place),
                         color: Colors.white,
                       ),
                     ],
@@ -78,40 +79,60 @@ class _PyramidsState extends State<Pyramids> {
   }
 
   Widget buildList(BuildContext context, int index) {
+    void _showSecondPage(BuildContext context){
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (ctx) => Scaffold(
+            body: Center(
+              child: Hero(
+                tag: '${info.pyramids[index]['tag']}',
+                child: Image.asset('${info.pyramids[index]['logotext']}'),
+              ),
+            ),
+          ),
+        ),
+      );
+    }
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: Colors.white,
       ),
       width: double.infinity,
-      height: 190,
+      height: 195,
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            width: 60,
-            height: 60,
-            margin: EdgeInsets.only(right: 10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(width: 3, color: secondary),
-              image: DecorationImage(
-                  image: AssetImage('${pyramids[index]['logotext']}'),
-                  fit: BoxFit.fill),
+                borderRadius: BorderRadius.circular(50.0),
+                border: Border.all(width: 3 ,color: secondary)
             ),
+            child: GestureDetector(
+              child: Hero(
+                tag: '${info.pyramids[index]['tag']}',
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('${info.pyramids[index]['logotext']}'),
+                ),
+              ),
+              onTap: () => _showSecondPage(context),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 10.0),
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  pyramids[index]['name'],
+                  info.pyramids[index]['name'],
                   style: TextStyle(
                       color: primary,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                      fontSize: 22),
                 ),
                 SizedBox(
                   height: 6,
@@ -127,10 +148,10 @@ class _PyramidsState extends State<Pyramids> {
                       width: 5,
                     ),
                     Text(
-                      pyramids[index]['location'],
+                      info.pyramids[index]['location'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -150,10 +171,10 @@ class _PyramidsState extends State<Pyramids> {
                       width: 5,
                     ),
                     Text(
-                      pyramids[index]['date'],
+                      info.pyramids[index]['date'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 12,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -173,10 +194,10 @@ class _PyramidsState extends State<Pyramids> {
                       width: 5,
                     ),
                     Text(
-                      pyramids[index]['cafe'],
+                      info.pyramids[index]['cafe'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 10,
+                        fontSize: 11,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -196,12 +217,13 @@ class _PyramidsState extends State<Pyramids> {
                       width: 5,
                     ),
                     Text(
-                      pyramids[index]['price'],
+                      info.pyramids[index]['price'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 11,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
+                      textDirection: TextDirection.rtl,
                     ),
                   ],
                 ),

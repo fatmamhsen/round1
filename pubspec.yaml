@@ -24,7 +24,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.4.0
-
+  sqflite: any
 
 dev_dependencies:
   flutter_test:
@@ -53,80 +53,101 @@ flutter:
     - images/museum.jpg
     - images/park.jpg
     - images/map.jpg
+    - images/backk.jpg
+    - images/ff.jpg
 
-    #museum
-    - images/eltafl.jpg
-    - images/elfonon .jpg
-    - images/ma7modKhlial.jpg
-    - images/elMasry.jpg
-    - images/elfanElslamy.jpg
-    - images/elgeology.jpg
-    - images/elkhazafElEslamy.jpg
-    - images/el7adeth.jpg
-    - images/elkomy.jpg
-    - images/Elkomy ll 7adara.jpg
-    - images/el7ayoan.jpg
-    - images/alkabty .jpg
-    - images/kaserAbdeen.jpg
-    - images/elnasygElmasry.jpg
-    - images/elzeraye.jpg
-    - images/mo7amedAli.jpg
-    - images/anderson.jpg
-    - images/elgamya.jpg
-    - images/el7arf.jpg
-    - images/7eloan.gif
-    - images/elshorta.jpg
-    - images/mostafaKamel .jpg
-    - images/omKolsom.jpg
+  #museum
+    - images/meusum/eltafl.jpg
+    - images/meusum/elfonon .jpg
+    - images/meusum/4am3.jpg
+    - images/meusum/ma7modKhlial.jpg
+    - images/meusum/elMasry.jpg
+    - images/meusum/elfanElslamy.jpg
+    - images/meusum/elgeology.jpg
+    - images/meusum/elkhazafElEslamy.jpg
+    - images/meusum/el7adeth.jpg
+    - images/meusum/elkomy.jpg
+    - images/meusum/Elkomy ll 7adara.jpg
+    - images/meusum/el7ayoan.jpg
+    - images/meusum/alkabty .jpg
+    - images/meusum/kaserAbdeen.jpg
+    - images/meusum/elnasygElmasry.jpg
+    - images/meusum/elzeraye.jpg
+    - images/meusum/mo7amedAli.jpg
+    - images/meusum/anderson.jpg
+    - images/meusum/elgamya.jpg
+    - images/meusum/el7arf.jpg
+    - images/meusum/elshorta.jpg
+    - images/meusum/mostafaKamel .jpg
+    - images/meusum/omKolsom.jpg
 
-    #mosque
-    - images/aboEldahb.jpg
-    - images/al7akm.jpg
-    - images/al70san.jpg
-    - images/alakmar.JPG
-    - images/alazhr.jpg
-    - images/amr.jpg
-    - images/asha.jpg
-    - images/barkok.jpg
-    - images/ebntolon.jpg
-    - images/El7amdyaElshalya.jpg
-    - images/elma7modia.jpg
-    - images/elrfaay.jpg
-    - images/elsoltanAboAlala.jpg
-    - images/kaherElttar.jpg
-    - images/kanybay.jpg
-    - images/mo7medali.jpg
-    - images/moaidshekh.jpg
-    - images/nafisa.jpg
-    - images/salahElden.jpg
-    - images/zyned.jpg
+  #mosque
 
-    #pyramids
-    - images/aisha.jpg
-    - images/babElfoto7.jpg
-    - images/babElnasr.jpg
-    - images/babzewala.jpg
-    - images/baron.jpg
-    - images/basher.jpg
-    - images/bashtak.jpg
-    - images/Ben_Ezra.jpg
-    - images/elborg.jpg
-    - images/elforonia.jpg
-    - images/elmo2az.jpg
-    - images/elobra.jpg
-    - images/elroda.jpg
-    - images/gaohara.jpg
-    - images/kalaoon.jpg
-    - images/khanelkalil.jpg
-    - images/taz.jpg
+    - images/mosques/amr.jpg
+    - images/mosques/al7akm.jpg
+    - images/mosques/al70san.jpg
+    - images/mosques/alakmar.jpg
+    - images/mosques/alazhr.jpg
+    - images/mosques/asha.jpg
+    - images/mosques/barkok.jpg
+    - images/mosques/ebntolon.jpg
+    - images/mosques/El7amdyaElshalya.jpg
+    - images/mosques/elma7modia.jpg
+    - images/mosques/elrfaay.jpg
+    - images/mosques/elsoltanAboAlala.jpg
+    - images/mosques/kaherElttar.jpg
+    - images/mosques/kanybay.jpg
+    - images/mosques/mo7medali.jpg
+    - images/mosques/moaidshekh.jpg
+    - images/mosques/nafisa.jpg
+    - images/mosques/salahElden.jpg
+    - images/mosques/zyned.jpg
+    - images/mosques/aboEldahb.jpg
 
-    #park
+  #pyramids
 
+    - images/peyrmides/aisha.jpg
+    - images/peyrmides/babElfoto7.jpg
+    - images/peyrmides/babElnasr.jpg
+    - images/peyrmides/babzewala.jpg
+    - images/peyrmides/baron.jpg
+    - images/peyrmides/basher.jpg
+    - images/peyrmides/bashtak.jpg
+    - images/peyrmides/Ben_Ezra.jpg
+    - images/peyrmides/elborg.jpg
+    - images/peyrmides/7rm.jpg
+    - images/peyrmides/mo3lqa.jpg
+    - images/peyrmides/elforonia.jpg
+    - images/peyrmides/elmo2az.jpg
+    - images/peyrmides/elobra.jpg
+    - images/peyrmides/elroda.jpg
+    - images/peyrmides/gaohara.jpg
+    - images/peyrmides/kalaoon.jpg
+    - images/peyrmides/khanelkalil.jpg
+    - images/peyrmides/taz.jpg
 
+  #park
 
-
-
-
+    - images/park/7oria.jpg
+    - images/park/7ywan.jpg
+    - images/park/alasher.jpg
+    - images/park/alyabanya.jpg
+    - images/park/asmak.jpg
+    - images/park/andalos.jpg
+    - images/park/azher.jpg
+    - images/park/dolia.jpg
+    - images/park/ebnsandar.jpg
+    - images/park/elmanyl.jpg
+    - images/park/eloroba.jpg
+    - images/park/elroda.jpg
+    - images/park/fostat.jpg
+    - images/park/frdos.jpg
+    - images/park/lotes.jpg
+    - images/park/merland.jpg
+    - images/park/omklsom.jpg
+    - images/park/senia.jpg
+    - images/park/sfari.jpg
+    - images/park/zaid.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -166,8 +187,3 @@ flutter:
   - family: Lemonada
     fonts:
     - asset: fonts/Lemonada-VariableFont_wght.ttf
-
-
-  - family: BalooBhaijaan
-    fonts:
-    - asset: fonts/BalooBhaijaan-Regular.ttf

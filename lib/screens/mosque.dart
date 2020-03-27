@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/data/mosquedata.dart';
 
@@ -7,9 +8,10 @@ class Mosque extends StatefulWidget {
 }
 
 class _MosqueState extends State<Mosque> {
-  final primary = Color(0xff607d8b);
-  final secondary = Color(0xffff9e80);
-
+  MosqueData info = new MosqueData();
+  final primary = Color(0xff689bb9);
+  final secondary = Color(0xff689bb9);
+  //0xff44525e
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,13 +26,17 @@ class _MosqueState extends State<Mosque> {
                 padding: EdgeInsets.only(top: 145),
                 height: MediaQuery.of(context).size.height,
                 width: double.infinity,
+                // build list
+
                 child: ListView.builder(
-                    itemCount: mosque.length,
+                    itemCount: info.mosque.length,
                     itemBuilder: (BuildContext context, int index) {
-                      return buildList(context, index);
+                     return buildList(context, index);
                     }),
               ),
-              Container(
+              // add main container of name and Icon
+
+               Container(
                 height: 140,
                 width: double.infinity,
                 decoration: BoxDecoration(
@@ -61,7 +67,7 @@ class _MosqueState extends State<Mosque> {
                       ),
                       IconButton(
                         onPressed: () {},
-                        icon: Icon(Icons.add_location),
+                        icon: Icon(Icons.place),
                         color: Colors.white,
                       ),
                     ],
@@ -74,42 +80,66 @@ class _MosqueState extends State<Mosque> {
       ),
     );
   }
+// build list of hero to open photo
 
   Widget buildList(BuildContext context, int index) {
+      void _showSecondPage(BuildContext context){
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (ctx) => Scaffold(
+              body: Center(
+                  child: Hero(
+                    tag: '${info.mosque[index]['tag']}',
+                    child: Image.asset('${info.mosque[index]['logotext']}'),
+                  ),
+                ),
+              ),
+            ),
+        );
+    }
+    // container of info
+
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         color: Colors.white,
       ),
       width: double.infinity,
-      height: 190,
+      height: 195,
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
+          // of photo
           Container(
-            width: 60,
-            height: 60,
-            margin: EdgeInsets.only(right: 10),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(width: 3, color: secondary),
-              image: DecorationImage(
-                  image: AssetImage('${mosque[index]['logotext']}'),
-                  fit: BoxFit.fill),
+              borderRadius: BorderRadius.circular(50.0),
+              border: Border.all(width: 3 ,color: secondary)
             ),
+            child: GestureDetector(
+              child: Hero(
+                  tag: '${info.mosque[index]['tag']}',
+                  child: CircleAvatar(
+                      backgroundImage: AssetImage('${info.mosque[index]['logotext']}'),
+                  ),
+              ),
+              onTap: () => _showSecondPage(context),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 10.0),
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  mosque[index]['name'],
+                  info.mosque[index]['name'],
                   style: TextStyle(
                       color: primary,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                      fontSize: 22),
                 ),
                 SizedBox(
                   height: 6,
@@ -125,10 +155,10 @@ class _MosqueState extends State<Mosque> {
                       width: 5,
                     ),
                     Text(
-                      mosque[index]['location'],
+                      info.mosque[index]['location'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 12,
+                        fontSize: 13,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -148,10 +178,10 @@ class _MosqueState extends State<Mosque> {
                       width: 5,
                     ),
                     Text(
-                      mosque[index]['date'],
+                      info.mosque[index]['date'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 12,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -171,10 +201,10 @@ class _MosqueState extends State<Mosque> {
                       width: 5,
                     ),
                     Text(
-                      mosque[index]['cafe'],
+                      info.mosque[index]['cafe'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 10,
+                        fontSize: 11,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -194,12 +224,13 @@ class _MosqueState extends State<Mosque> {
                       width: 5,
                     ),
                     Text(
-                      mosque[index]['price'],
+                      info.mosque[index]['price'],
                       style: TextStyle(
                         color: primary,
-                        fontSize: 11,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
                       ),
+                      textDirection: TextDirection.rtl,
                     ),
                   ],
                 ),
