@@ -159,7 +159,7 @@ class PyramidsData {
       'location': 'حي المنيل - قسم، حي مصر القديمة',
       'date': 'مفتوح دائما',
       'cafe': 'عنتر الكبابجى-Pizza Hut-زيتوني',
-      'logotext': 'images/peyrmides/elroda.jpg',
+      'logotext': 'images/peyrmides/roda.jpg',
       'price': 'مجانا',
       'tag': '18',
     },

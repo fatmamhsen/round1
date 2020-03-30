@@ -23,7 +23,6 @@ class _RoundState extends State<Round> {
     return Scaffold(
       bottomNavigationBar: Base(),
       body: Container(
-        color: Colors.grey.shade100,
 //        decoration: BoxDecoration(
 //          image: DecorationImage(
 //            image: AssetImage('images/map.jpg'),

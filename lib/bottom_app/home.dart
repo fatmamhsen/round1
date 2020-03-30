@@ -15,29 +15,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-     // bottomNavigationBar: Base(),
-//      appBar: AppBar(
-//          elevation: 0,
-//          backgroundColor: Color(0xfffa278b9),
-//          centerTitle: true,
-//          title: Text(
-//            'خدلك راوند',
-//            style: TextStyle(
-//              color: Colors.white,
-//              fontSize: 20.0,
-//              fontFamily: 'Lemonada',
-//            ),
-//          ),
-//          actions: <Widget>[
-//            IconButton(
-//              icon: Icon(Icons.add_location),
-//              onPressed: () {},
-//            ),
-//          ],
-//        ),
       body:  Container(
-        color: Colors.grey.shade100,
 //        decoration: BoxDecoration(
 //          image: DecorationImage(
 //            image: AssetImage('images/map.jpg'),

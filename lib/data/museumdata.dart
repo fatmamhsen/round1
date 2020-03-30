@@ -6,7 +6,7 @@ class MuseumData {
       "location": "أحمد بن طولون, السيدة زينب",
       "date": " من 9ص:5م ",
       "cafe": "أسماك بلية -المهندس -كافية سرايا الجزيرة",
-      "logotext": "images/meusum/anderson.jpg",
+      "logotext": "images/meusum/andrson.jpg",
       "price": "ج10",
       "tag": "1",
     },
