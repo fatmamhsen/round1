@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/ui/listview_visit.dart';
+import 'package:round/ui/userinterface.dart';
 import 'about.dart';
-import 'home.dart';
 
 class Base extends StatefulWidget {
   @override
@@ -10,14 +10,14 @@ class Base extends StatefulWidget {
 }
 
 class _BaseState extends State<Base> {
-
+  final Color primary = Color(0xff696b9e);
   int currentTab = 0;
   final List<Widget> screens = [
     About(),
-    Home(),
+    Round(),
   ];
   final PageStorageBucket bucket = PageStorageBucket();
-  Widget currentScreen = Home();
+  Widget currentScreen = Round();
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _BaseState extends State<Base> {
         bucket: bucket,
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xff696b9e),
+        backgroundColor: primary,
         child: Icon(Icons.add),
           onPressed: (){
           Navigator.push(context,
@@ -52,7 +52,7 @@ class _BaseState extends State<Base> {
                     onPressed: () {
                       setState(() {
                         currentScreen =
-                            Home();
+                            Round();
                         currentTab = 0;
                       });
                     },
@@ -63,7 +63,7 @@ class _BaseState extends State<Base> {
                         Icon(
                           Icons.home,
                           size: 38,
-                          color: currentTab == 0 ? Color(0xff696b9e) : Colors.grey,
+                          color: currentTab == 0 ? primary : Colors.grey,
                         ),
                       ],
                     ),
@@ -92,7 +92,7 @@ class _BaseState extends State<Base> {
                         Icon(
                           Icons.info,
                           size: 35,
-                          color: currentTab == 1 ? Color(0xff696b9e) : Colors.grey,
+                          color: currentTab == 1 ? primary : Colors.grey,
                         ),
                       ],
                     ),

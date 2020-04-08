@@ -26,6 +26,7 @@ dependencies:
   font_awesome_flutter: ^8.4.0
   sqflite: any
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -51,107 +52,12 @@ flutter:
     - images/mosque.jpg
     - images/museum.jpg
     - images/park.jpg
-    - images/map.jpg
-    - images/backk.jpg
+    - images/back0.jpg
     - images/meusum/
     - images/park/
     - images/mosques/
     - images/peyrmides/
 
-
-
-#  #museum
-#    - images/meusum/eltafl.jpg
-#    - images/meusum/elfonon .jpg
-#    - images/meusum/4am3.jpg
-#    - images/meusum/ma7modKhlial.jpg
-#    - images/meusum/elMasry.jpg
-#    - images/meusum/elfanElslamy.jpg
-#    - images/meusum/elgeology.jpg
-#    - images/meusum/elkhazafElEslamy.jpg
-#    - images/meusum/el7adeth.jpg
-#    - images/meusum/elkomy.jpg
-#    - images/meusum/Elkomy ll 7adara.jpg
-#    - images/meusum/el7ayoan.jpg
-#    - images/meusum/alkabty .jpg
-#    - images/meusum/kaserAbdeen.jpg
-#    - images/meusum/elnasygElmasry.jpg
-#    - images/meusum/elzeraye.jpg
-#    - images/meusum/mo7amedAli.jpg
-#    - images/meusum/andrson.jpg
-#    - images/meusum/elgamya.jpg
-#    - images/meusum/el7arf.jpg
-#    - images/meusum/elshorta.jpg
-#    - images/meusum/mostafaKamel .jpg
-#    - images/meusum/omKolsom.jpg
-#
-#  #mosque
-#
-#    - images/mosques/amr.jpg
-#    - images/mosques/7akem.jpg
-#    - images/mosques/al70san.jpg
-#    - images/mosques/alakmar.jpg
-#    - images/mosques/azhar.png
-#    - images/mosques/3a4a.jpg
-#    - images/mosques/barkok.jpg
-#    - images/mosques/tolon.jpg
-#    - images/mosques/El7amdyaElshalya.jpg
-#    - images/mosques/mo7amdy.jpg
-#    - images/mosques/elrfaay.jpg
-#    - images/mosques/elsoltanAboAlala.jpg
-#    - images/mosques/qaher.jpg
-#    - images/mosques/mo7medali.jpg
-#    - images/mosques/moaidshekh.jpg
-#    - images/mosques/nafesa.jpg
-#    - images/mosques/salahElden.jpg
-#    - images/mosques/zyned.jpg
-#    - images/mosques/dahb.jpg
-#
-#  #pyramids
-#
-#    - images/peyrmides/aisha.jpg
-#    - images/peyrmides/babElfoto7.jpg
-#    - images/peyrmides/babElnasr.jpg
-#    - images/peyrmides/babzewala.jpg
-#    - images/peyrmides/baron.jpg
-#    - images/peyrmides/basher.jpg
-#    - images/peyrmides/bashtak.jpg
-#    - images/peyrmides/Ben_Ezra.jpg
-#    - images/peyrmides/elborg.jpg
-#    - images/peyrmides/7rm.jpg
-#    - images/peyrmides/mo3lqa.jpg
-#    - images/peyrmides/elforonia.jpg
-#    - images/peyrmides/elmo2az.jpg
-#    - images/peyrmides/elobra.jpg
-#    - images/peyrmides/roda.jpg
-#    - images/peyrmides/gaohara.jpg
-#    - images/peyrmides/kalaoon.jpg
-#    - images/peyrmides/khanelkalil.jpg
-#    - images/peyrmides/taz.jpg
-#
-#  #park
-#
-#    - images/park/7oria.jpg
-#    - images/park/7ywan.jpg
-#    - images/park/asher.jpg
-#    - images/park/yabania.jpg
-#    - images/park/asmak.jpg
-#    - images/park/andlos.jpg
-#    - images/park/azherpark.jpg
-#    - images/park/dolia.jpg
-#    - images/park/abnsander.jpg
-#    - images/park/maneal.jpg
-#    - images/park/eloroba.jpg
-#    - images/park/elroda.jpg
-#    - images/park/fostat.jpg
-#    - images/park/frdos.jpg
-#    - images/park/lotes.jpg
-#    - images/park/merland.jpg
-#    - images/park/omklsom.jpg
-#    - images/park/senia.jpg
-#    - images/park/sfarii.jpg
-#    - images/park/zaid.jpg
-#
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -8,8 +8,8 @@ class Park extends StatefulWidget {
 
 class _ParkState extends State<Park> {
   ParkData info = new ParkData();
-  final primary = Color(0xff5b8c85);
-  final secondary = Color(0xff5b8c85);
+  final primary = Color(0xff027971);
+  final secondary = Color(0xff027971);
 
   @override
   Widget build(BuildContext context) {

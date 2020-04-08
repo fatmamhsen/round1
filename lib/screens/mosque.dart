@@ -9,9 +9,9 @@ class Mosque extends StatefulWidget {
 
 class _MosqueState extends State<Mosque> {
   MosqueData info = new MosqueData();
-  final primary = Color(0xff689bb9);
-  final secondary = Color(0xff689bb9);
-  //0xff44525e
+  final primary = Colors.blueGrey;
+  final secondary = Colors.blueGrey;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

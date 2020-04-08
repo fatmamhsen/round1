@@ -8,8 +8,8 @@ class Pyramids extends StatefulWidget {
 
 class _PyramidsState extends State<Pyramids> {
   PyramidsData info = new PyramidsData();
-  final primary = Color(0xffba6b57);
-  final secondary = Color(0xffba6b57);
+  final primary = Color(0xff0b83a8);
+  final secondary = Color(0xff0b83a8);
 
   @override
   Widget build(BuildContext context) {
