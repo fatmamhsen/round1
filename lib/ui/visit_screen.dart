@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/model/visit.dart';
 import 'package:round/utils/database_helper.dart';
@@ -22,8 +23,7 @@ class _VisitScreenState extends State<VisitScreen> {
 
   @override
   void initState()  {
-    // TODO: implement initState
-    super.initState();
+     super.initState();
 
     _placeController = new TextEditingController(text: widget.visit.place);
     _siteController = new TextEditingController(text: widget.visit.site);
@@ -53,20 +53,25 @@ class _VisitScreenState extends State<VisitScreen> {
           children: <Widget>[
             TextField(
               controller: _placeController,
-              decoration: InputDecoration(labelText: 'المكان'),
+              decoration: InputDecoration(
+                  labelText: 'المكان'),
+              textDirection: TextDirection.rtl,
             ),
             Padding(padding: EdgeInsets.all(5.0)),
             TextField(
+              textDirection: TextDirection.rtl,
               controller: _siteController,
               decoration: InputDecoration(labelText: 'الموقع'),
             ),
             Padding(padding: EdgeInsets.all(5.0)),
             TextField(
+              textDirection: TextDirection.rtl,
               controller: _dateController,
               decoration: InputDecoration(labelText: 'المواعيد'),
             ),
             Padding(padding: EdgeInsets.all(5.0)),
             TextField(
+              textDirection: TextDirection.rtl,
               controller: _ticketController,
               decoration: InputDecoration(labelText: 'التذكرة'),
             ),
@@ -74,7 +79,7 @@ class _VisitScreenState extends State<VisitScreen> {
 //edit or save
             RaisedButton(
               child: (widget.visit.id != null) ? Text(
-                'update',style: TextStyle(color: Colors.white),) : Text('save',style: TextStyle(color: Colors.white),) ,
+                'تعديل',style: TextStyle(color: Colors.white),) : Text('حفظ',style: TextStyle(color: Colors.white),) ,
               color: Colors.green.shade800,
               onPressed: () {
                 if(widget.visit.id != null){

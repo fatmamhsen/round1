@@ -25,7 +25,8 @@ dependencies:
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.4.0
   sqflite: any
-
+  flutter_spinkit: ^3.1.0
+  http: ^0.12.0+2
 
 dev_dependencies:
   flutter_test:
@@ -52,7 +53,6 @@ flutter:
     - images/mosque.jpg
     - images/museum.jpg
     - images/park.jpg
-    - images/back0.jpg
     - images/meusum/
     - images/park/
     - images/mosques/

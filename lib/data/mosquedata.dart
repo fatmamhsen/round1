@@ -139,7 +139,7 @@ final List<Map> mosque = [
 },
 {
 'name': 'مسجد الحامدية الشاذلية',
-'location': 'شارع الحجاز- المهندسين- الجيزة-مصر',
+'location': 'شارع الحجاز- المهندسين- الجيزة',
 'date': 'مفتوح دائما',
 'cafe': 'ابومازن السوري-ام حسن-حاتي انس',
 'logotext': 'images/mosques/El7amdyaElshalya.jpg',
@@ -157,7 +157,7 @@ final List<Map> mosque = [
 },
 {
 'name': 'مسجد السلطان ابو العلا',
-'location': 'بولاق4، بولاق',
+'location': ' بولاق 4',
 'date': 'من 9ص:5م',
 'cafe': 'زكي السماك-كشري ابوطارق-falafilo',
 'logotext': 'images/mosques/elsoltanAboAlala.jpg',
@@ -175,9 +175,9 @@ final List<Map> mosque = [
 },
 {
 'name': 'مسجد الرفاعي',
-'location': 'لرفاعي، الدرب الأحمر',
+'location': 'الرفاعي، الدرب الأحمر',
 'date': 'من 9ص:5م',
-'cafe': 'ع الرايق-شيخ العرب-كبابجيالفتح',
+'cafe': 'ع الرايق-شيخ العرب-كبابجي الفتح',
 'logotext': 'images/mosques/elrfaay.jpg',
 'price': '10ج',
 'tag' : '21',

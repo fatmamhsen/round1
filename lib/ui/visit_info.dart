@@ -12,7 +12,7 @@ class VisitInfo extends StatefulWidget{
 }
 
 class _VisitInfoState extends State<VisitInfo> {
-//object from datahelper
+//object from dataHelper
 
   DatabaseHelper vs = new DatabaseHelper();
 // info to use

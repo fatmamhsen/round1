@@ -14,7 +14,7 @@ class MuseumData {
       "name": "المتحف القبطى",
       "location": "	ماري جرجس، كوم غراب، حي مصر القديمة",
       "date": " من 9ص:4م ",
-      "cafe": "Volo's Cafe -Resturant&Cafe Al Khan-مطعم تاچوري",
+      "cafe": "Volo's Cafe-Al Khan-مطعم تاچوري",
       "logotext": "images/meusum/alkabty .jpg",
       "price": "10ج للفرد - 5ج للطالب",
       "tag": "2",
@@ -41,7 +41,7 @@ class MuseumData {
       "name": "المتحف الجيولوجى المصرى",
       "location": "الخوخة والقناية، حي مصر القديمة",
       "date": " من 9ص:2م ",
-      "cafe": " -سى هورس كلوب-Tavola Restaurant and Lounge",
+      "cafe": "سى هورس كلوب-Tavola Restaurant and Lounge",
       "logotext": "images/meusum/elgeology.jpg",
       "price": "2ج",
       "tag": "5",
@@ -66,7 +66,7 @@ class MuseumData {
     },
     {
       "name": "المتحف المصري",
-      "location": "Tahrir Square rd Tahrir Square‬",
+      "location": "ميدان التحرير‬",
       "date": " من 9ص:5م ",
       "cafe": "مطعم تبوله -بانى فينو -Oldish ( Restaurant & Cafe )",
       "logotext": "images/meusum/elMasry.jpg",
@@ -129,7 +129,7 @@ class MuseumData {
     },
     {
       "name": "متحف مصطفى كامل",
-      "location": "الديورة، حي مصر القديمة، محافظة القاهرة‬",
+      "location": "الديورة، حي مصر القديمة",
       "date": " من 9ص:2م عدا الجمعه والسبت",
       "cafe": "كسكسي ابو احمد-Resturant & Cafe Al Khan ",
       "logotext": "images/meusum/mostafaKamel .jpg",
@@ -165,7 +165,7 @@ class MuseumData {
     },
     {
       "name": "متحف علم الحيوان",
-      "location": "قسم الحيوان، داخلي-جامعة القاهرة-أولى-الجيزة‬",
+      "location": "قسم الحيوان، داخلي-جامعة القاهرة‬-الجيزة",
       "date": " من 10ص:3م عدا الثلاثاء",
       "cafe": "Hayda Lebanese Restaurant- مطعم سان جورج",
       "logotext": "images/meusum/el7ayoan.jpg",
@@ -174,7 +174,7 @@ class MuseumData {
     },
     {
       "name": "متحف الشمع بحلوان",
-      "location": "منصور، قسم حلوان، محافظة القاهرة‬",
+      "location": "منصور، قسم حلوان",
       "date": " من 10ص:2م عدا الجمعه",
       "cafe": "ابوصلاح _ كاب تشكن _ بيتزا وكريب وعصاير القنبلة",
       "logotext": "images/meusum/4am3.jpg",

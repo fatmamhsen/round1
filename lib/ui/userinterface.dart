@@ -7,7 +7,6 @@ import 'package:round/screens/park.dart';
 import 'package:round/screens/pyramids.dart';
 
 
-
 class Round extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => _RoundState();
@@ -20,166 +19,159 @@ class _RoundState extends State<Round> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  Container(
-   //    decoration: BoxDecoration(
-//          image: DecorationImage(
-//            image: AssetImage('images/logo.png'),
-//            fit: BoxFit.cover,
-//          ),
-    //  ),
-//        child: BackdropFilter(
-//          filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
-        child: Column(
-          children: <Widget>[
-            Stack(
-              children: <Widget>[
-                Container(
-                  padding: EdgeInsets.only(top: 10.0),
-                  width: double.infinity,
-                  height: 100.0,
-                  decoration: BoxDecoration(
-                    color: primary,
-                    borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35.0) , bottomRight: Radius.circular(35.0) ),
-                  ),
-                  child:
-                  Center(
-                    child: Text('خدلك راوند',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20.0,
-                        fontFamily: 'Lemonada',
-                      ),
-                    ),
-                  ),
-                ),
-                IconButton(
-                  onPressed: (){},
-                  padding: EdgeInsets.only(left: 350.0,top: 38.0),
-                  icon: Icon(Icons.place,color: Colors.white,size: 28.0,),
-                ),
-              ],
-            ),
-            Expanded(
-              child: Row(
+      body:  SafeArea(
+        child: Container(
+          child: Column(
+            children: <Widget>[
+              Stack(
                 children: <Widget>[
-                  Expanded(
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage('images/mosque.jpg'),
-                      radius: 100.0,
-                      child: FlatButton(
-                        color: Colors.white70,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
-                        child: Text(
-                          'المساجد',
-                          style: TextStyle(
-                            fontFamily: 'Lemonada',
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.black,
+                  Container(
+                    padding: EdgeInsets.only(top: 10.0),
+                    width: double.infinity,
+                    height: 100.0,
+                    decoration: BoxDecoration(
+                      color: primary,
+                      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(35.0) , bottomRight: Radius.circular(35.0) ),
+                    ),
+                    child: Center(
+                          child: Text('خدلك راوند',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              fontFamily: 'Lemonada',
+                            ),
                           ),
                         ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Mosque()));
-                        },
-                      ),
-                    ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                  ),
-                  Expanded(
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage('images/museum.jpg',
-                      ),
-                      radius: 100.0,
-                      child: FlatButton(
-                        color: Colors.white70,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
-                        child: Text(
-                          'المتاحف',
-                          style: TextStyle(
-                            fontFamily: 'Lemonada',
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.black,
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Museum()));
-                        },
-                      ),
-                    ),
+                  IconButton(
+                    onPressed: (){},
+                    padding: EdgeInsets.only(left: 350.0,top: 38.0),
+                    icon: Icon(Icons.place,color: Colors.white,size: 28.0,),
                   ),
                 ],
               ),
-            ),
-            Expanded(
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage('images/pyramid.jpg'),
-                      radius: 100.0,
-                      child: FlatButton(
-                        padding: EdgeInsets.symmetric(horizontal: 10.0 ,vertical: 6.0),
-                        color: Colors.white70,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
-                        child: Text(
-                          'المعالم السياحيه',
-                          style: TextStyle(
-                            fontFamily: 'Lemonada',
-                            fontSize: 19.0,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.black,
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('images/mosque.jpg'),
+                        radius: 100.0,
+                        child: FlatButton(
+                          color: Colors.white70,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
+                          child: Text(
+                            'المساجد',
+                            style: TextStyle(
+                              fontFamily: 'Lemonada',
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.black,
+                            ),
                           ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Mosque()));
+                          },
                         ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Pyramids()));
-                        },
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.all(10.0),
-                  ),
-                  Expanded(
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage('images/park.jpg'),
-                      radius: 100.0,
-                      child: FlatButton(
-                        color: Colors.white70,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
-                        child: Text(
-                          'الحدائق',
-                          style: TextStyle(
-                            fontFamily: 'Lemonada',
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.w900,
-                            color: Colors.black,
-                          ),
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                    ),
+                    Expanded(
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('images/museum.jpg',
                         ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Park()));
-                        },
+                        radius: 100.0,
+                        child: FlatButton(
+                          color: Colors.white70,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
+                          child: Text(
+                            'المتاحف',
+                            style: TextStyle(
+                              fontFamily: 'Lemonada',
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.black,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Museum()));
+                          },
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-          ],
+              Expanded(
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('images/pyramid.jpg'),
+                        radius: 100.0,
+                        child: FlatButton(
+                          padding: EdgeInsets.symmetric(horizontal: 10.0 ,vertical: 6.0),
+                          color: Colors.white70,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
+                          child: Text(
+                            'المعالم السياحيه',
+                            style: TextStyle(
+                              fontFamily: 'Lemonada',
+                              fontSize: 19.0,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.black,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Pyramids()));
+                          },
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                    ),
+                    Expanded(
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('images/park.jpg'),
+                        radius: 100.0,
+                        child: FlatButton(
+                          color: Colors.white70,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0),),
+                          child: Text(
+                            'الحدائق',
+                            style: TextStyle(
+                              fontFamily: 'Lemonada',
+                              fontSize: 25.0,
+                              fontWeight: FontWeight.w900,
+                              color: Colors.black,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Park()));
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

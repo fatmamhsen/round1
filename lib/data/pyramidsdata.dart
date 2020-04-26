@@ -21,7 +21,7 @@ class PyramidsData {
     },
     {
       'name': 'خان الخليلي ',
-      'location': 'الجمالية، قسم الجمالية،',
+      'location': 'الجمالية، قسم الجمالية',
       'date': 'مفتوح دائما',
       'cafe': 'ساقيه بيت القاضى-بيتزا هت',
       'logotext': 'images/peyrmides/khanelkalil.jpg',

@@ -17,7 +17,6 @@ class _ListViewVisitState extends State<ListViewVisit> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     vs.getAllVisit().then((visits) {
