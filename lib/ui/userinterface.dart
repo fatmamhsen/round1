@@ -19,8 +19,7 @@ class _RoundState extends State<Round> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  SafeArea(
-        child: Container(
+      body: Container(
           child: Column(
             children: <Widget>[
               Stack(
@@ -125,11 +124,11 @@ class _RoundState extends State<Round> {
                             'المعالم السياحيه',
                             style: TextStyle(
                               fontFamily: 'Lemonada',
-                              fontSize: 19.0,
+                              fontSize: 15.0,
                               fontWeight: FontWeight.w900,
                               color: Colors.black,
                             ),
-                          ),
+                          ), 
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -173,7 +172,6 @@ class _RoundState extends State<Round> {
             ],
           ),
         ),
-      ),
     );
   }
 }
