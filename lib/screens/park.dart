@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:round/data/parkdata.dart';
+import 'package:photo_view/photo_view.dart';
 
 class Park extends StatefulWidget {
   Park({Key key}) : super(key: key);
@@ -84,7 +85,11 @@ class _ParkState extends State<Park> {
             body: Center(
               child: Hero(
                 tag: '${info.park[index]['tag']}',
-                child: Image.asset('${info.park[index]['logotext']}'),
+                child: PhotoView(
+                  imageProvider: AssetImage(' ${info.park[index]['logotext']}'),
+                  minScale: PhotoViewComputedScale.contained*0.8,
+                  maxScale: PhotoViewComputedScale.covered*2,
+                ),
               ),
             ),
           ),

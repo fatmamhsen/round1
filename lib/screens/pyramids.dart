@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/data/pyramidsdata.dart';
+import 'package:photo_view/photo_view.dart';
 
 class Pyramids extends StatefulWidget {
   Pyramids({Key key}) : super(key: key);
@@ -87,7 +88,11 @@ class _PyramidsState extends State<Pyramids> {
             body: Center(
               child: Hero(
                 tag: '${info.pyramids[index]['tag']}',
-                child: Image.asset('${info.pyramids[index]['logotext']}'),
+                child: PhotoView(
+                  imageProvider: AssetImage(' ${info.pyramids[index]['logotext']}'),
+                  minScale: PhotoViewComputedScale.contained*0.8,
+                  maxScale: PhotoViewComputedScale.covered*2,
+                ),
               ),
             ),
           ),

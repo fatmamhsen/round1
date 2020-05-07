@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:round/data/museumdata.dart';
+import 'package:photo_view/photo_view.dart';
 
 class Museum extends StatefulWidget {
   Museum({Key key}) : super(key: key);
@@ -84,7 +85,11 @@ class _MuseumState extends State<Museum> {
             body: Center(
               child: Hero(
                 tag: '${info.museum[index]['tag']}',
-                child: Image.asset('${info.museum[index]['logotext']}'),
+                child: PhotoView(
+                  imageProvider: AssetImage(' ${info.museum[index]['logotext']}'),
+                  minScale: PhotoViewComputedScale.contained*0.8,
+                  maxScale: PhotoViewComputedScale.covered*2,
+                ),
               ),
             ),
           ),

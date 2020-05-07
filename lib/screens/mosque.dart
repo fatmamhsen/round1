@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/data/mosquedata.dart';
+import 'package:photo_view/photo_view.dart';
 
 class Mosque extends StatefulWidget {
   Mosque({Key key}) : super(key: key);
@@ -90,7 +91,11 @@ class _MosqueState extends State<Mosque> {
               body: Center(
                   child: Hero(
                     tag: '${info.mosque[index]['tag']}',
-                    child: Image.asset('${info.mosque[index]['logotext']}'),
+                    child: PhotoView(
+                      imageProvider: AssetImage(' ${info.mosque[index]['logotext']}'),
+                      minScale: PhotoViewComputedScale.contained*0.8,
+                      maxScale: PhotoViewComputedScale.covered*2,
+                    ),
                   ),
                 ),
               ),
