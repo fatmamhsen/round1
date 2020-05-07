@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/data/pyramidsdata.dart';
+import 'package:photo_view/photo_view.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Pyramids extends StatefulWidget {
   Pyramids({Key key}) : super(key: key);
@@ -11,6 +13,14 @@ class _PyramidsState extends State<Pyramids> {
   PyramidsData info = new PyramidsData();
   final primary = Color(0xff0b83a8);
   final secondary = Color(0xff0b83a8);
+
+  _launchURL() async {
+    const url = 'https://www.google.com/maps';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }}
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +74,7 @@ class _PyramidsState extends State<Pyramids> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {_launchURL();},
                         icon: Icon(Icons.place),
                         color: Colors.white,
                       ),
@@ -87,7 +97,11 @@ class _PyramidsState extends State<Pyramids> {
             body: Center(
               child: Hero(
                 tag: '${info.pyramids[index]['tag']}',
-                child: Image.asset('${info.pyramids[index]['logotext']}'),
+                child: PhotoView(
+                  imageProvider: AssetImage('${info.pyramids[index]['logotext']}'),
+                  minScale: PhotoViewComputedScale.contained*0.8,
+                  maxScale: PhotoViewComputedScale.covered*2,
+                ),
               ),
             ),
           ),
