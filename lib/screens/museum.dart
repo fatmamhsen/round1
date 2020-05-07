@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:round/data/museumdata.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Museum extends StatefulWidget {
   Museum({Key key}) : super(key: key);
@@ -12,13 +10,6 @@ class _MuseumState extends State<Museum> {
   MuseumData info = new MuseumData();
   final primary = Color(0xff3b6979);
   final secondary = Color(0xff3b6979);
-  _launchURL() async {
-    const url = 'https://www.google.com/maps';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }}
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +61,7 @@ class _MuseumState extends State<Museum> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {_launchURL();},
+                        onPressed: () {},
                         icon: Icon(Icons.place),
                         color: Colors.white,
                       ),
@@ -93,11 +84,7 @@ class _MuseumState extends State<Museum> {
             body: Center(
               child: Hero(
                 tag: '${info.museum[index]['tag']}',
-                child: PhotoView(
-                  imageProvider: AssetImage('${info.museum[index]['logotext']}'),
-                  minScale: PhotoViewComputedScale.contained*0.8,
-                  maxScale: PhotoViewComputedScale.covered*2,
-                ),
+                child: Image.asset('${info.museum[index]['logotext']}'),
               ),
             ),
           ),

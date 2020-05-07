@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/data/mosquedata.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Mosque extends StatefulWidget {
   Mosque({Key key}) : super(key: key);
@@ -13,14 +11,6 @@ class _MosqueState extends State<Mosque> {
   MosqueData info = new MosqueData();
   final primary = Colors.blueGrey;
   final secondary = Colors.blueGrey;
-
-  _launchURL() async {
-    const url = 'https://www.google.com/maps';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }}
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +66,7 @@ class _MosqueState extends State<Mosque> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {_launchURL();},
+                        onPressed: () {},
                         icon: Icon(Icons.place),
                         color: Colors.white,
                       ),
@@ -100,11 +90,7 @@ class _MosqueState extends State<Mosque> {
               body: Center(
                   child: Hero(
                     tag: '${info.mosque[index]['tag']}',
-                     child: PhotoView(
-                        imageProvider: AssetImage('${info.mosque[index]['logotext']}'),
-                       minScale: PhotoViewComputedScale.contained*0.8,
-                       maxScale: PhotoViewComputedScale.covered*2,
-                      ),
+                    child: Image.asset('${info.mosque[index]['logotext']}'),
                   ),
                 ),
               ),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:round/data/parkdata.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Park extends StatefulWidget {
   Park({Key key}) : super(key: key);
@@ -12,14 +10,6 @@ class _ParkState extends State<Park> {
   ParkData info = new ParkData();
   final primary = Color(0xff027971);
   final secondary = Color(0xff027971);
-
-  _launchURL() async {
-    const url = 'https://www.google.com/maps';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }}
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +61,7 @@ class _ParkState extends State<Park> {
                         ),
                       ),
                       IconButton(
-                        onPressed: () {_launchURL();},
+                        onPressed: () {},
                         icon: Icon(Icons.place),
                         color: Colors.white,
                       ),
@@ -94,11 +84,7 @@ class _ParkState extends State<Park> {
             body: Center(
               child: Hero(
                 tag: '${info.park[index]['tag']}',
-                child: PhotoView(
-                  imageProvider: AssetImage('${info.park[index]['logotext']}'),
-                  minScale: PhotoViewComputedScale.contained*0.8,
-                  maxScale: PhotoViewComputedScale.covered*2,
-                ),
+                child: Image.asset('${info.park[index]['logotext']}'),
               ),
             ),
           ),
