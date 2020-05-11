@@ -38,6 +38,7 @@ class _AboutState extends State<About> {
             'وتقدر تضيف الاماكن اللي خرجت فيها عشان لو بتنسي الطريق والخروجه بتكلفك كام !',
             textDirection: TextDirection.rtl,
             style: TextStyle(
+              color: Colors.black,
               fontFamily: 'Harmattan',
               fontSize: 25.0,
               fontWeight: FontWeight.w400,

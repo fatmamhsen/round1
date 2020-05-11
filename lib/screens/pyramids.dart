@@ -25,7 +25,7 @@ class _PyramidsState extends State<Pyramids> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff0f0f0),
+     // backgroundColor: Color(0xfff0f0f0),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -111,13 +111,13 @@ class _PyramidsState extends State<Pyramids> {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          color: Colors.grey.shade100,
         ),
         width: double.infinity,
         height: 195,
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 8),
+        padding: EdgeInsets.symmetric(vertical: 15, horizontal: 14),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

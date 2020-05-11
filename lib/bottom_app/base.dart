@@ -5,6 +5,8 @@ import 'package:round/ui/userinterface.dart';
 import 'about.dart';
 
 class Base extends StatefulWidget {
+  static String id = "Base";
+
   @override
   _BaseState createState() => _BaseState();
 }

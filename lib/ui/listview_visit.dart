@@ -1,3 +1,4 @@
+import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:round/model/visit.dart';
 import 'package:round/ui/visit_info.dart';
@@ -6,6 +7,7 @@ import 'package:round/utils/database_helper.dart';
 
 
 class ListViewVisit extends StatefulWidget{
+  static String id = "ListViewVisit";
   @override
   _ListViewVisitState createState() => new _ListViewVisitState();
 }
@@ -32,7 +34,14 @@ class _ListViewVisitState extends State<ListViewVisit> {
   @override
   Widget build(BuildContext context) {
     //appbar of list
-    return MaterialApp(
+   return DynamicTheme(
+      defaultBrightness: Brightness.light,
+      data: (brightness) =>  ThemeData(
+        brightness: brightness,
+      ),
+      themedWidgetBuilder: (context, theme) {
+      return MaterialApp(
+      theme: theme,
       debugShowCheckedModeBanner: false,
       title: 'All Visit',
       home: Scaffold(
@@ -121,7 +130,8 @@ class _ListViewVisitState extends State<ListViewVisit> {
       ),
     );
   }
-
+   );
+  }
 // method delete
   _deleteVisit(BuildContext context,Visit visit,int position) async{
     vs.deleteVisit(visit.id).then((visits){

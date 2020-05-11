@@ -24,7 +24,6 @@ class _ParkState extends State<Park> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff0f0f0),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -109,7 +108,7 @@ class _ParkState extends State<Park> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: Colors.white,
+          color: Colors.grey.shade100,
         ),
         width: double.infinity,
         height: 195,
@@ -210,7 +209,7 @@ class _ParkState extends State<Park> {
                         ),
                       ),
                       SizedBox(
-                        width: 5,
+                        width: 8,
                       ),
                       Icon(
                         Icons.fastfood,

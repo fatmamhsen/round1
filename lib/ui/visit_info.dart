@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:round/model/visit.dart';
 import 'package:round/utils/database_helper.dart';
@@ -37,56 +38,78 @@ class _VisitInfoState extends State<VisitInfo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text('المعلومات',
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Lemonada',
+            fontSize: 18.0,
+          ),
+        ),
+        centerTitle: true,
         backgroundColor: Color(0xff696b9e),
       ),
       //enter your info
-      body: Container(
-        margin: EdgeInsets.all(15.0),
-         alignment: Alignment.center,
-        child: Column(
-          children: <Widget>[
-            Padding(padding: EdgeInsets.only(top: 20.0)),
-            Card(
-              color: Colors.grey.shade300,
-              child: Text(' المكان : $place ',
-                style: TextStyle(
-                  fontStyle: FontStyle.normal,
-                  fontSize: 22.0,
+      body: ListView(
+        children: [
+          Container(
+            margin: EdgeInsets.all(15.0),
+             alignment: Alignment.center,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Padding(padding: EdgeInsets.only(top: 40.0)),
+                Card(
+                  color: Colors.grey.shade300,
+                  child: Text(' المكان : $place ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 22.0,
+                    ),
+                    textDirection: TextDirection.rtl,
+                  ),
                 ),
-              ),
-            ),
-            Padding(padding: EdgeInsets.only(top: 20.0)),
-            Card(
-              color: Colors.grey.shade300,
-              child: Text(' الموقع : $site ',
-                style: TextStyle(
-                  fontStyle: FontStyle.normal,
-                  fontSize: 22.0,
+                Padding(padding: EdgeInsets.only(top: 40.0)),
+                Card(
+                  color: Colors.grey.shade300,
+                  child: Text(' الموقع : $site ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 22.0,
+                    ),
+                    textDirection: TextDirection.rtl,
+                  ),
                 ),
-              ),
-            ),
-            Padding(padding: EdgeInsets.only(top: 20.0)),
-            Card(
-              color: Colors.grey.shade300,
-              child: Text(' المواعيد : $date ',
-                style: TextStyle(
-                  fontStyle: FontStyle.normal,
-                  fontSize: 22.0,
+                Padding(padding: EdgeInsets.only(top: 40.0)),
+                Card(
+                  color: Colors.grey.shade300,
+                  child: Text(' المواعيد : $date ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontStyle: FontStyle.normal,
+                      fontSize: 22.0,
+                    ),
+                    textDirection: TextDirection.rtl,
+                  ),
                 ),
-              ),
+                Padding(padding: EdgeInsets.only(top: 40.0 )),
+                Card(
+                    color: Colors.grey.shade300,
+                    child: Text(' التذكرة : $ticket ',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontStyle: FontStyle.normal,
+                        fontSize: 22.0,
+                      ),
+                      textDirection: TextDirection.rtl,
+                    ),
+                  ),
+              ],
             ),
-            Padding(padding: EdgeInsets.only(top: 20.0)),
-            Card(
-              color: Colors.grey.shade300,
-              child: Text(' التذكرة : $ticket ',
-                style: TextStyle(
-                  fontStyle: FontStyle.normal,
-                  fontSize: 22.0,
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

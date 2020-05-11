@@ -5,6 +5,7 @@ import 'package:photo_view/photo_view.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Mosque extends StatefulWidget {
+  static String id = "Mosque";
   Mosque({Key key}) : super(key: key);
   _MosqueState createState() => _MosqueState();
 }
@@ -25,7 +26,6 @@ class _MosqueState extends State<Mosque> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfff0f0f0),
       body: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height,
@@ -117,7 +117,7 @@ class _MosqueState extends State<Mosque> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
-          color: Colors.white,
+          color: Colors.grey.shade100,
         ),
         width: double.infinity,
         height: 195,

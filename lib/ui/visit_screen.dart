@@ -92,7 +92,8 @@ class _VisitScreenState extends State<VisitScreen> {
                   })).then((_){
                     Navigator.pop(context, 'update');
                   }) ;
-                } else {
+                } else if(_placeController.text.isNotEmpty &&_siteController.text.isNotEmpty
+                    &&_dateController.text.isNotEmpty &&_ticketController.text.isNotEmpty) {
                   vs.saveVisit(Visit(
                       _placeController.text,
                       _siteController.text,
@@ -102,6 +103,8 @@ class _VisitScreenState extends State<VisitScreen> {
                   )).then((_){
                     Navigator.pop(context, 'save');
                   });
+                }else {
+                  print('error');
                 }
               },
             ),

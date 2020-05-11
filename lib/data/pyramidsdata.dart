@@ -3,7 +3,7 @@ class PyramidsData {
   final List <Map> pyramids = [
     {
       'name': 'الاهرمات',
-      'location': 'الهرم ، الجيزة',
+      'location': 'الهرم،الجيزة',
       'date': 'من 8ص:5م',
       'cafe': 'KFC- Sofra',
       'logotext': 'images/peyrmides/7rm.jpg',
@@ -12,7 +12,7 @@ class PyramidsData {
     },
     {
       'name': 'قلعة صلاح الدين',
-      'location': 'صلاح سالم، الدرب الأحمر',
+      'location': 'صلاح سالم،الدرب الأحمر',
       'date': 'من 9ص:4م',
       'cafe': 'El Dahhan Restaurant-حبش',
       'logotext': 'images/mosques/salahElden.jpg',
@@ -21,7 +21,7 @@ class PyramidsData {
     },
     {
       'name': 'خان الخليلي ',
-      'location': 'الجمالية، قسم الجمالية',
+      'location': 'الجمالية،قسم الجمالية',
       'date': 'مفتوح دائما',
       'cafe': 'ساقيه بيت القاضى-بيتزا هت',
       'logotext': 'images/peyrmides/khanelkalil.jpg',
@@ -39,7 +39,7 @@ class PyramidsData {
     },
     {
       'name': 'شارع المعز لدين الله الفاطمي',
-      'location': 'المعز لدين الله الفاطمي، الجمالية، قسم الجمالية',
+      'location': 'المعز لدين الله الفاطمي،الجمالية،قسم الجمالية',
       'date': 'مفتوح دائما',
       'cafe': 'بابا عبده-بروست الديك',
       'logotext': 'images/peyrmides/elmo2az.jpg',
@@ -48,7 +48,7 @@ class PyramidsData {
     },
     {
       'name': 'قصر عائشة ',
-      'location': 'عزيز اباظه، الزمالك',
+      'location': 'عزيز اباظه،الزمالك',
       'date': 'من 9ص:9م ماعدا الجمعة',
       'cafe': 'Crimson Cairo-نواب-سيكوبا',
       'logotext': 'images/peyrmides/aisha.jpg',
@@ -57,7 +57,7 @@ class PyramidsData {
     },
     {
       'name': 'قصر البارون امبان',
-      'location': 'العروبة، المنتزه، قسم مصر الجديدة',
+      'location': 'العروبة، المنتزه،قسم مصر الجديدة',
       'date': 'من 9ص:9م',
       'cafe': 'ساشي-ابو حيدر-ارابياتا',
       'logotext': 'images/peyrmides/baron.jpg',
@@ -66,7 +66,7 @@ class PyramidsData {
     },
     {
       'name': 'القرية الفرعونيه ',
-      'location': 'شارع البحر الأعظم، ساقية مكي',
+      'location': 'شارع البحر الأعظم،ساقية مكي',
       'date': 'من 9ص:7م',
       'cafe': 'مطعم السلطان-مطعم زيتونة',
       'logotext': 'images/peyrmides/elforonia.jpg',
@@ -84,7 +84,7 @@ class PyramidsData {
     },
     {
       'name': 'مجموعة قلاوون',
-      'location': 'الجمالية، قسم الجمالية',
+      'location': 'الجمالية،قسم الجمالية',
       'date': 'من 9ص:5م',
       'cafe': 'مطعم اسماك غانم-فطاطري الحسين',
       'logotext': 'images/peyrmides/kalaoon.jpg',
@@ -102,7 +102,7 @@ class PyramidsData {
     },
     {
       'name': 'باب النصر ',
-      'location': 'باب النصر، الجمالية، قسم الجمالية',
+      'location': 'باب النصر،الجمالية،قسم الجمالية',
       'date': 'مفتوح دائما',
       'cafe': 'بابا عبده-مطعم فرحات الازهر',
       'logotext': 'images/peyrmides/babElnasr.jpg',
@@ -111,7 +111,7 @@ class PyramidsData {
     },
     {
       'name': 'باب الفتوح',
-      'location': 'الجمالية، قسم الجمالية',
+      'location': 'الجمالية،قسم الجمالية',
       'date': 'مفتوح دائما ',
       'cafe': 'بابا عبده-الامور-مطعم محمد الشرقاوى',
       'logotext': 'images/peyrmides/babElfoto7.jpg',
@@ -120,9 +120,9 @@ class PyramidsData {
     },
     {
       'name': 'قصر الامير بشتاك',
-      'location': 'المعز لدين الله الفاطمي، الجمالية، قسم الجمالية',
+      'location': 'المعز لدين الله الفاطمي، الجمالية،قسم الجمالية',
       'date': 'مفتوح دائما',
-      'cafe': 'ساقيه بيت القاضى-مطعم العهد الجديد-فطاطري الحسين',
+      'cafe': 'ساقيه بيت القاضى-العهد الجديد-فطاطري الحسين',
       'logotext': 'images/peyrmides/bashtak.jpg',
       'price': '5ج للمصريين و 3ج للطالب',
       'tag': '14',
@@ -147,7 +147,7 @@ class PyramidsData {
     },
     {
       'name': 'قصر الجوهرة',
-      'location': 'الاباجيه -القاهرة',
+      'location': 'الاباجيه-القاهرة',
       'date': 'من 9ص:5م',
       'cafe': 'ابوسليمان-أسماك بلية-ع الرايق',
       'logotext': 'images/peyrmides/gaohara.jpg',
